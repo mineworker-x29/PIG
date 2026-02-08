@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "source": "data/raw",
+    "format": "OCEL-JSON (stub)"
+  },
+  "objects": [
+    {
+      "id": "order-1",
+      "type": "order",
+      "attributes": {
+        "region": "KR"
+      }
+    },
+    {
+      "id": "invoice-1",
+      "type": "invoice",
+      "attributes": {
+        "amount": 12000
+      }
+    }
+  ],
+  "events": [
+    {
+      "id": "evt-1",
+      "activity": "Create Order",
+      "timestamp": "2026-01-01T09:00:00Z",
+      "omap": [
+        "order-1"
+      ]
+    },
+    {
+      "id": "evt-2",
+      "activity": "Issue Invoice",
+      "timestamp": "2026-01-01T10:00:00Z",
+      "omap": [
+        "order-1",
+        "invoice-1"
+      ]
+    }
+  ]
+}
