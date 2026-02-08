@@ -3,7 +3,7 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-from pig.pipeline import run_default_ocdfg_pipeline
+from pig.pipeline import run_default_ocdfg_pipeline, run_graph_samples
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -41,6 +41,17 @@ def build_parser() -> argparse.ArgumentParser:
         default=Path("data/processed/basic_report.md"),
         help="기본 레포트 출력 경로",
     )
+    parser.add_argument(
+        "--sample-graphs",
+        action="store_true",
+        help="event log를 활용해 sample OC-DFG/OC-PN PNG를 생성",
+    )
+    parser.add_argument(
+        "--graph-out-dir",
+        type=Path,
+        default=Path("data/processed"),
+        help="sample 그래프 PNG 출력 디렉터리",
+    )
     return parser
 
 
@@ -55,6 +66,16 @@ def main() -> int:
     )
     print(f"[PIG] OC-DFG generated: {dfg_path}")
     print(f"[PIG] Report generated: {report_path}")
+
+    if args.sample_graphs:
+        dfg_png, ocpn_png = run_graph_samples(
+            raw_dir=args.raw_dir,
+            out_dir=args.graph_out_dir,
+            event_log_path=args.event_log,
+            ocel_path=args.ocel,
+        )
+        print(f"[PIG] Sample OC-DFG image generated: {dfg_png}")
+        print(f"[PIG] Sample OC-PN image generated: {ocpn_png}")
     return 0
 
 

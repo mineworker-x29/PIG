@@ -7,6 +7,8 @@ import json
 from pathlib import Path
 from typing import Any
 
+from pig.visualize import render_oc_dfg_png, render_oc_pn_png
+
 
 def _parse_timestamp(value: str) -> datetime:
     if value.endswith("Z"):
@@ -142,3 +144,26 @@ def run_default_ocdfg_pipeline(
     report_out_path.write_text(report, encoding="utf-8")
 
     return dfg_out_path, report_out_path
+
+
+def run_graph_samples(
+    raw_dir: Path,
+    out_dir: Path,
+    event_log_path: Path | None = None,
+    ocel_path: Path | None = None,
+) -> tuple[Path, Path]:
+    raw_dir = raw_dir.resolve()
+    event_log_path = (event_log_path or _resolve_default_file(raw_dir, "*.csv")).resolve()
+    ocel_path = (ocel_path or _resolve_default_file(raw_dir, "*.ocel.json")).resolve()
+
+    ocel_payload = _load_ocel(ocel_path)
+    oc_dfg = _build_oc_dfg(ocel_payload)
+
+    log_name = event_log_path.stem
+    oc_dfg_png_path = out_dir / f"{log_name}_oc-dfg.png"
+    oc_pn_png_path = out_dir / f"{log_name}_oc-pn.png"
+
+    render_oc_dfg_png(oc_dfg, oc_dfg_png_path, title=f"{log_name} - OC-DFG")
+    render_oc_pn_png(ocel_payload, oc_pn_png_path, title=f"{log_name} - OC-PN")
+
+    return oc_dfg_png_path, oc_pn_png_path

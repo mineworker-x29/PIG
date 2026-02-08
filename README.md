@@ -55,6 +55,15 @@ make run
 - `data/processed/oc_dfg.json`
 - `data/processed/basic_report.md`
 
+샘플 그래프(PNG) 생성:
+```bash
+pig --sample-graphs
+```
+
+생성 파일 예시(실행 시 로컬에 생성되며 저장소에는 커밋하지 않음):
+- `data/processed/plasma_etcher_event_log_oc-dfg.png`
+- `data/processed/plasma_etcher_event_log_oc-pn.png`
+
 ## 다음 단계 제안
 - 원천 시스템별 파서 모듈 추가 (`src/pig/connectors/*`)
 - OCEL 검증 스키마/테스트 추가
