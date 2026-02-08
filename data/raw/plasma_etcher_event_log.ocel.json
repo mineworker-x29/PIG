@@ -1,0 +1,1281 @@
+{
+  "meta": {
+    "source": "data/raw/plasma_etcher_event_log.csv",
+    "format": "OCEL-JSON",
+    "description": "Plasma Etcher event log with start/end lifecycle semantics (no separate return label)."
+  },
+  "objects": [
+    {
+      "id": "Aligner",
+      "type": "aligner",
+      "attributes": {
+        "module_group": "EFEM"
+      }
+    },
+    {
+      "id": "FOUP-PKHG3.1",
+      "type": "foup",
+      "attributes": {
+        "lot_id": "PKHG3.1"
+      }
+    },
+    {
+      "id": "LP1",
+      "type": "loadport",
+      "attributes": {
+        "module_group": "EFEM"
+      }
+    },
+    {
+      "id": "LP2",
+      "type": "loadport",
+      "attributes": {
+        "module_group": "EFEM"
+      }
+    },
+    {
+      "id": "LP3",
+      "type": "loadport",
+      "attributes": {
+        "module_group": "EFEM"
+      }
+    },
+    {
+      "id": "Loadlock1",
+      "type": "loadlock",
+      "attributes": {
+        "module_group": "LoadLock"
+      }
+    },
+    {
+      "id": "Loadlock2",
+      "type": "loadlock",
+      "attributes": {
+        "module_group": "LoadLock"
+      }
+    },
+    {
+      "id": "PKHG3.1",
+      "type": "lot",
+      "attributes": {
+        "lot_id": "PKHG3.1"
+      }
+    },
+    {
+      "id": "PKHG3.1_03",
+      "type": "wafer",
+      "attributes": {
+        "lot_id": "PKHG3.1",
+        "wafer_id": "03"
+      }
+    },
+    {
+      "id": "PKHG3.1_04",
+      "type": "wafer",
+      "attributes": {
+        "lot_id": "PKHG3.1",
+        "wafer_id": "04"
+      }
+    },
+    {
+      "id": "PM1",
+      "type": "process_module",
+      "attributes": {
+        "module_group": "ProcessModule"
+      }
+    },
+    {
+      "id": "PM2",
+      "type": "process_module",
+      "attributes": {
+        "module_group": "ProcessModule"
+      }
+    },
+    {
+      "id": "PM5",
+      "type": "process_module",
+      "attributes": {
+        "module_group": "ProcessModule"
+      }
+    },
+    {
+      "id": "PM6",
+      "type": "process_module",
+      "attributes": {
+        "module_group": "ProcessModule"
+      }
+    },
+    {
+      "id": "Stocker",
+      "type": "stocker",
+      "attributes": {
+        "module_group": "Factory"
+      }
+    },
+    {
+      "id": "TransferModule",
+      "type": "transfer_module",
+      "attributes": {
+        "module_group": "TM"
+      }
+    }
+  ],
+  "events": [
+    {
+      "id": "E001",
+      "activity": "FOUP Loading Start",
+      "timestamp": "2026-02-01T08:00:00Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_03",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Stocker"
+      ],
+      "vmap": {
+        "action": "FOUP Loading",
+        "lifecycle": "start",
+        "case_id": "PKHG3.1_03",
+        "from_module": "Stocker",
+        "to_module": "LP1"
+      }
+    },
+    {
+      "id": "E002",
+      "activity": "FOUP Loading End",
+      "timestamp": "2026-02-01T08:00:10Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_03",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Stocker"
+      ],
+      "vmap": {
+        "action": "FOUP Loading",
+        "lifecycle": "end",
+        "case_id": "PKHG3.1_03",
+        "from_module": "Stocker",
+        "to_module": "LP1"
+      }
+    },
+    {
+      "id": "E003",
+      "activity": "EFEM Transfer to Aligner Start",
+      "timestamp": "2026-02-01T08:00:14Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_03",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Aligner"
+      ],
+      "vmap": {
+        "action": "EFEM Transfer to Aligner",
+        "lifecycle": "start",
+        "case_id": "PKHG3.1_03",
+        "from_module": "LP1",
+        "to_module": "Aligner"
+      }
+    },
+    {
+      "id": "E004",
+      "activity": "EFEM Transfer to Aligner End",
+      "timestamp": "2026-02-01T08:00:26Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_03",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Aligner"
+      ],
+      "vmap": {
+        "action": "EFEM Transfer to Aligner",
+        "lifecycle": "end",
+        "case_id": "PKHG3.1_03",
+        "from_module": "LP1",
+        "to_module": "Aligner"
+      }
+    },
+    {
+      "id": "E005",
+      "activity": "Alignment Start",
+      "timestamp": "2026-02-01T08:00:30Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_03",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Aligner"
+      ],
+      "vmap": {
+        "action": "Alignment",
+        "lifecycle": "start",
+        "case_id": "PKHG3.1_03",
+        "from_module": "Aligner",
+        "to_module": "Aligner"
+      }
+    },
+    {
+      "id": "E006",
+      "activity": "Alignment End",
+      "timestamp": "2026-02-01T08:00:38Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_03",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Aligner"
+      ],
+      "vmap": {
+        "action": "Alignment",
+        "lifecycle": "end",
+        "case_id": "PKHG3.1_03",
+        "from_module": "Aligner",
+        "to_module": "Aligner"
+      }
+    },
+    {
+      "id": "E007",
+      "activity": "EFEM Transfer to Loadlock Start",
+      "timestamp": "2026-02-01T08:00:42Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_03",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Loadlock1",
+        "Aligner"
+      ],
+      "vmap": {
+        "action": "EFEM Transfer to Loadlock",
+        "lifecycle": "start",
+        "case_id": "PKHG3.1_03",
+        "from_module": "Aligner",
+        "to_module": "Loadlock1"
+      }
+    },
+    {
+      "id": "E008",
+      "activity": "EFEM Transfer to Loadlock End",
+      "timestamp": "2026-02-01T08:00:54Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_03",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Loadlock1",
+        "Aligner"
+      ],
+      "vmap": {
+        "action": "EFEM Transfer to Loadlock",
+        "lifecycle": "end",
+        "case_id": "PKHG3.1_03",
+        "from_module": "Aligner",
+        "to_module": "Loadlock1"
+      }
+    },
+    {
+      "id": "E009",
+      "activity": "Loadlock Door Operation Start",
+      "timestamp": "2026-02-01T08:00:58Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_03",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Loadlock1"
+      ],
+      "vmap": {
+        "action": "Loadlock Door Operation",
+        "lifecycle": "start",
+        "case_id": "PKHG3.1_03",
+        "from_module": "Loadlock1",
+        "to_module": "Loadlock1"
+      }
+    },
+    {
+      "id": "E010",
+      "activity": "Loadlock Door Operation End",
+      "timestamp": "2026-02-01T08:01:06Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_03",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Loadlock1"
+      ],
+      "vmap": {
+        "action": "Loadlock Door Operation",
+        "lifecycle": "end",
+        "case_id": "PKHG3.1_03",
+        "from_module": "Loadlock1",
+        "to_module": "Loadlock1"
+      }
+    },
+    {
+      "id": "E011",
+      "activity": "Loadlock Pumping Start",
+      "timestamp": "2026-02-01T08:01:10Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_03",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Loadlock1"
+      ],
+      "vmap": {
+        "action": "Loadlock Pumping",
+        "lifecycle": "start",
+        "case_id": "PKHG3.1_03",
+        "from_module": "Loadlock1",
+        "to_module": "Loadlock1"
+      }
+    },
+    {
+      "id": "E012",
+      "activity": "Loadlock Pumping End",
+      "timestamp": "2026-02-01T08:01:30Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_03",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Loadlock1"
+      ],
+      "vmap": {
+        "action": "Loadlock Pumping",
+        "lifecycle": "end",
+        "case_id": "PKHG3.1_03",
+        "from_module": "Loadlock1",
+        "to_module": "Loadlock1"
+      }
+    },
+    {
+      "id": "E013",
+      "activity": "Loadlock Slit Operation Start",
+      "timestamp": "2026-02-01T08:01:34Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_03",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Loadlock1",
+        "TransferModule"
+      ],
+      "vmap": {
+        "action": "Loadlock Slit Operation",
+        "lifecycle": "start",
+        "case_id": "PKHG3.1_03",
+        "from_module": "Loadlock1",
+        "to_module": "TransferModule"
+      }
+    },
+    {
+      "id": "E014",
+      "activity": "Loadlock Slit Operation End",
+      "timestamp": "2026-02-01T08:01:42Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_03",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Loadlock1",
+        "TransferModule"
+      ],
+      "vmap": {
+        "action": "Loadlock Slit Operation",
+        "lifecycle": "end",
+        "case_id": "PKHG3.1_03",
+        "from_module": "Loadlock1",
+        "to_module": "TransferModule"
+      }
+    },
+    {
+      "id": "E015",
+      "activity": "PM Slit Inbound Operation Start",
+      "timestamp": "2026-02-01T08:01:46Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_03",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "PM1",
+        "TransferModule"
+      ],
+      "vmap": {
+        "action": "PM Slit Inbound Operation",
+        "lifecycle": "start",
+        "case_id": "PKHG3.1_03",
+        "from_module": "TransferModule",
+        "to_module": "PM1"
+      }
+    },
+    {
+      "id": "E016",
+      "activity": "PM Slit Inbound Operation End",
+      "timestamp": "2026-02-01T08:01:54Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_03",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "PM1",
+        "TransferModule"
+      ],
+      "vmap": {
+        "action": "PM Slit Inbound Operation",
+        "lifecycle": "end",
+        "case_id": "PKHG3.1_03",
+        "from_module": "TransferModule",
+        "to_module": "PM1"
+      }
+    },
+    {
+      "id": "E017",
+      "activity": "PM Processing Start",
+      "timestamp": "2026-02-01T08:01:58Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_03",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "PM1"
+      ],
+      "vmap": {
+        "action": "PM Processing",
+        "lifecycle": "start",
+        "case_id": "PKHG3.1_03",
+        "from_module": "PM1",
+        "to_module": "PM1"
+      }
+    },
+    {
+      "id": "E018",
+      "activity": "PM Processing End",
+      "timestamp": "2026-02-01T08:03:28Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_03",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "PM1"
+      ],
+      "vmap": {
+        "action": "PM Processing",
+        "lifecycle": "end",
+        "case_id": "PKHG3.1_03",
+        "from_module": "PM1",
+        "to_module": "PM1"
+      }
+    },
+    {
+      "id": "E019",
+      "activity": "PM Slit Outbound Operation Start",
+      "timestamp": "2026-02-01T08:03:32Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_03",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "PM1",
+        "TransferModule"
+      ],
+      "vmap": {
+        "action": "PM Slit Outbound Operation",
+        "lifecycle": "start",
+        "case_id": "PKHG3.1_03",
+        "from_module": "PM1",
+        "to_module": "TransferModule"
+      }
+    },
+    {
+      "id": "E020",
+      "activity": "PM Slit Outbound Operation End",
+      "timestamp": "2026-02-01T08:03:40Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_03",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "PM1",
+        "TransferModule"
+      ],
+      "vmap": {
+        "action": "PM Slit Outbound Operation",
+        "lifecycle": "end",
+        "case_id": "PKHG3.1_03",
+        "from_module": "PM1",
+        "to_module": "TransferModule"
+      }
+    },
+    {
+      "id": "E021",
+      "activity": "Loadlock Slit Operation Start",
+      "timestamp": "2026-02-01T08:03:44Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_03",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Loadlock1",
+        "TransferModule"
+      ],
+      "vmap": {
+        "action": "Loadlock Slit Operation",
+        "lifecycle": "start",
+        "case_id": "PKHG3.1_03",
+        "from_module": "TransferModule",
+        "to_module": "Loadlock1"
+      }
+    },
+    {
+      "id": "E022",
+      "activity": "Loadlock Slit Operation End",
+      "timestamp": "2026-02-01T08:03:52Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_03",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Loadlock1",
+        "TransferModule"
+      ],
+      "vmap": {
+        "action": "Loadlock Slit Operation",
+        "lifecycle": "end",
+        "case_id": "PKHG3.1_03",
+        "from_module": "TransferModule",
+        "to_module": "Loadlock1"
+      }
+    },
+    {
+      "id": "E023",
+      "activity": "Loadlock Venting Start",
+      "timestamp": "2026-02-01T08:03:56Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_03",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Loadlock1"
+      ],
+      "vmap": {
+        "action": "Loadlock Venting",
+        "lifecycle": "start",
+        "case_id": "PKHG3.1_03",
+        "from_module": "Loadlock1",
+        "to_module": "Loadlock1"
+      }
+    },
+    {
+      "id": "E024",
+      "activity": "Loadlock Venting End",
+      "timestamp": "2026-02-01T08:04:14Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_03",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Loadlock1"
+      ],
+      "vmap": {
+        "action": "Loadlock Venting",
+        "lifecycle": "end",
+        "case_id": "PKHG3.1_03",
+        "from_module": "Loadlock1",
+        "to_module": "Loadlock1"
+      }
+    },
+    {
+      "id": "E025",
+      "activity": "Loadlock Door Operation Start",
+      "timestamp": "2026-02-01T08:04:18Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_03",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Loadlock1"
+      ],
+      "vmap": {
+        "action": "Loadlock Door Operation",
+        "lifecycle": "start",
+        "case_id": "PKHG3.1_03",
+        "from_module": "Loadlock1",
+        "to_module": "Loadlock1"
+      }
+    },
+    {
+      "id": "E026",
+      "activity": "Loadlock Door Operation End",
+      "timestamp": "2026-02-01T08:04:26Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_03",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Loadlock1"
+      ],
+      "vmap": {
+        "action": "Loadlock Door Operation",
+        "lifecycle": "end",
+        "case_id": "PKHG3.1_03",
+        "from_module": "Loadlock1",
+        "to_module": "Loadlock1"
+      }
+    },
+    {
+      "id": "E027",
+      "activity": "EFEM Transfer to FOUP Start",
+      "timestamp": "2026-02-01T08:04:30Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_03",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Loadlock1"
+      ],
+      "vmap": {
+        "action": "EFEM Transfer to FOUP",
+        "lifecycle": "start",
+        "case_id": "PKHG3.1_03",
+        "from_module": "Loadlock1",
+        "to_module": "LP1"
+      }
+    },
+    {
+      "id": "E028",
+      "activity": "EFEM Transfer to FOUP End",
+      "timestamp": "2026-02-01T08:04:42Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_03",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Loadlock1"
+      ],
+      "vmap": {
+        "action": "EFEM Transfer to FOUP",
+        "lifecycle": "end",
+        "case_id": "PKHG3.1_03",
+        "from_module": "Loadlock1",
+        "to_module": "LP1"
+      }
+    },
+    {
+      "id": "E029",
+      "activity": "FOUP Unloading Start",
+      "timestamp": "2026-02-01T08:04:46Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_03",
+        "FOUP-PKHG3.1",
+        "LP1"
+      ],
+      "vmap": {
+        "action": "FOUP Unloading",
+        "lifecycle": "start",
+        "case_id": "PKHG3.1_03",
+        "from_module": "LP1",
+        "to_module": "FOUP-PKHG3.1"
+      }
+    },
+    {
+      "id": "E030",
+      "activity": "FOUP Unloading End",
+      "timestamp": "2026-02-01T08:04:56Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_03",
+        "FOUP-PKHG3.1",
+        "LP1"
+      ],
+      "vmap": {
+        "action": "FOUP Unloading",
+        "lifecycle": "end",
+        "case_id": "PKHG3.1_03",
+        "from_module": "LP1",
+        "to_module": "FOUP-PKHG3.1"
+      }
+    },
+    {
+      "id": "E031",
+      "activity": "FOUP Loading Start",
+      "timestamp": "2026-02-01T08:00:20Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_04",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Stocker"
+      ],
+      "vmap": {
+        "action": "FOUP Loading",
+        "lifecycle": "start",
+        "case_id": "PKHG3.1_04",
+        "from_module": "Stocker",
+        "to_module": "LP1"
+      }
+    },
+    {
+      "id": "E032",
+      "activity": "FOUP Loading End",
+      "timestamp": "2026-02-01T08:00:30Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_04",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Stocker"
+      ],
+      "vmap": {
+        "action": "FOUP Loading",
+        "lifecycle": "end",
+        "case_id": "PKHG3.1_04",
+        "from_module": "Stocker",
+        "to_module": "LP1"
+      }
+    },
+    {
+      "id": "E033",
+      "activity": "EFEM Transfer to Aligner Start",
+      "timestamp": "2026-02-01T08:00:34Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_04",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Aligner"
+      ],
+      "vmap": {
+        "action": "EFEM Transfer to Aligner",
+        "lifecycle": "start",
+        "case_id": "PKHG3.1_04",
+        "from_module": "LP1",
+        "to_module": "Aligner"
+      }
+    },
+    {
+      "id": "E034",
+      "activity": "EFEM Transfer to Aligner End",
+      "timestamp": "2026-02-01T08:00:46Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_04",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Aligner"
+      ],
+      "vmap": {
+        "action": "EFEM Transfer to Aligner",
+        "lifecycle": "end",
+        "case_id": "PKHG3.1_04",
+        "from_module": "LP1",
+        "to_module": "Aligner"
+      }
+    },
+    {
+      "id": "E035",
+      "activity": "Alignment Start",
+      "timestamp": "2026-02-01T08:00:50Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_04",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Aligner"
+      ],
+      "vmap": {
+        "action": "Alignment",
+        "lifecycle": "start",
+        "case_id": "PKHG3.1_04",
+        "from_module": "Aligner",
+        "to_module": "Aligner"
+      }
+    },
+    {
+      "id": "E036",
+      "activity": "Alignment End",
+      "timestamp": "2026-02-01T08:00:58Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_04",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Aligner"
+      ],
+      "vmap": {
+        "action": "Alignment",
+        "lifecycle": "end",
+        "case_id": "PKHG3.1_04",
+        "from_module": "Aligner",
+        "to_module": "Aligner"
+      }
+    },
+    {
+      "id": "E037",
+      "activity": "EFEM Transfer to Loadlock Start",
+      "timestamp": "2026-02-01T08:01:02Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_04",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Loadlock2",
+        "Aligner"
+      ],
+      "vmap": {
+        "action": "EFEM Transfer to Loadlock",
+        "lifecycle": "start",
+        "case_id": "PKHG3.1_04",
+        "from_module": "Aligner",
+        "to_module": "Loadlock2"
+      }
+    },
+    {
+      "id": "E038",
+      "activity": "EFEM Transfer to Loadlock End",
+      "timestamp": "2026-02-01T08:01:14Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_04",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Loadlock2",
+        "Aligner"
+      ],
+      "vmap": {
+        "action": "EFEM Transfer to Loadlock",
+        "lifecycle": "end",
+        "case_id": "PKHG3.1_04",
+        "from_module": "Aligner",
+        "to_module": "Loadlock2"
+      }
+    },
+    {
+      "id": "E039",
+      "activity": "Loadlock Door Operation Start",
+      "timestamp": "2026-02-01T08:01:18Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_04",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Loadlock2"
+      ],
+      "vmap": {
+        "action": "Loadlock Door Operation",
+        "lifecycle": "start",
+        "case_id": "PKHG3.1_04",
+        "from_module": "Loadlock2",
+        "to_module": "Loadlock2"
+      }
+    },
+    {
+      "id": "E040",
+      "activity": "Loadlock Door Operation End",
+      "timestamp": "2026-02-01T08:01:26Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_04",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Loadlock2"
+      ],
+      "vmap": {
+        "action": "Loadlock Door Operation",
+        "lifecycle": "end",
+        "case_id": "PKHG3.1_04",
+        "from_module": "Loadlock2",
+        "to_module": "Loadlock2"
+      }
+    },
+    {
+      "id": "E041",
+      "activity": "Loadlock Pumping Start",
+      "timestamp": "2026-02-01T08:01:30Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_04",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Loadlock2"
+      ],
+      "vmap": {
+        "action": "Loadlock Pumping",
+        "lifecycle": "start",
+        "case_id": "PKHG3.1_04",
+        "from_module": "Loadlock2",
+        "to_module": "Loadlock2"
+      }
+    },
+    {
+      "id": "E042",
+      "activity": "Loadlock Pumping End",
+      "timestamp": "2026-02-01T08:01:50Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_04",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Loadlock2"
+      ],
+      "vmap": {
+        "action": "Loadlock Pumping",
+        "lifecycle": "end",
+        "case_id": "PKHG3.1_04",
+        "from_module": "Loadlock2",
+        "to_module": "Loadlock2"
+      }
+    },
+    {
+      "id": "E043",
+      "activity": "Loadlock Slit Operation Start",
+      "timestamp": "2026-02-01T08:01:54Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_04",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Loadlock2",
+        "TransferModule"
+      ],
+      "vmap": {
+        "action": "Loadlock Slit Operation",
+        "lifecycle": "start",
+        "case_id": "PKHG3.1_04",
+        "from_module": "Loadlock2",
+        "to_module": "TransferModule"
+      }
+    },
+    {
+      "id": "E044",
+      "activity": "Loadlock Slit Operation End",
+      "timestamp": "2026-02-01T08:02:02Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_04",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Loadlock2",
+        "TransferModule"
+      ],
+      "vmap": {
+        "action": "Loadlock Slit Operation",
+        "lifecycle": "end",
+        "case_id": "PKHG3.1_04",
+        "from_module": "Loadlock2",
+        "to_module": "TransferModule"
+      }
+    },
+    {
+      "id": "E045",
+      "activity": "PM Slit Inbound Operation Start",
+      "timestamp": "2026-02-01T08:02:06Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_04",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "PM6",
+        "TransferModule"
+      ],
+      "vmap": {
+        "action": "PM Slit Inbound Operation",
+        "lifecycle": "start",
+        "case_id": "PKHG3.1_04",
+        "from_module": "TransferModule",
+        "to_module": "PM6"
+      }
+    },
+    {
+      "id": "E046",
+      "activity": "PM Slit Inbound Operation End",
+      "timestamp": "2026-02-01T08:02:14Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_04",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "PM6",
+        "TransferModule"
+      ],
+      "vmap": {
+        "action": "PM Slit Inbound Operation",
+        "lifecycle": "end",
+        "case_id": "PKHG3.1_04",
+        "from_module": "TransferModule",
+        "to_module": "PM6"
+      }
+    },
+    {
+      "id": "E047",
+      "activity": "PM Processing Start",
+      "timestamp": "2026-02-01T08:02:18Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_04",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "PM6"
+      ],
+      "vmap": {
+        "action": "PM Processing",
+        "lifecycle": "start",
+        "case_id": "PKHG3.1_04",
+        "from_module": "PM6",
+        "to_module": "PM6"
+      }
+    },
+    {
+      "id": "E048",
+      "activity": "PM Processing End",
+      "timestamp": "2026-02-01T08:03:48Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_04",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "PM6"
+      ],
+      "vmap": {
+        "action": "PM Processing",
+        "lifecycle": "end",
+        "case_id": "PKHG3.1_04",
+        "from_module": "PM6",
+        "to_module": "PM6"
+      }
+    },
+    {
+      "id": "E049",
+      "activity": "PM Slit Outbound Operation Start",
+      "timestamp": "2026-02-01T08:03:52Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_04",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "PM6",
+        "TransferModule"
+      ],
+      "vmap": {
+        "action": "PM Slit Outbound Operation",
+        "lifecycle": "start",
+        "case_id": "PKHG3.1_04",
+        "from_module": "PM6",
+        "to_module": "TransferModule"
+      }
+    },
+    {
+      "id": "E050",
+      "activity": "PM Slit Outbound Operation End",
+      "timestamp": "2026-02-01T08:04:00Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_04",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "PM6",
+        "TransferModule"
+      ],
+      "vmap": {
+        "action": "PM Slit Outbound Operation",
+        "lifecycle": "end",
+        "case_id": "PKHG3.1_04",
+        "from_module": "PM6",
+        "to_module": "TransferModule"
+      }
+    },
+    {
+      "id": "E051",
+      "activity": "Loadlock Slit Operation Start",
+      "timestamp": "2026-02-01T08:04:04Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_04",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Loadlock2",
+        "TransferModule"
+      ],
+      "vmap": {
+        "action": "Loadlock Slit Operation",
+        "lifecycle": "start",
+        "case_id": "PKHG3.1_04",
+        "from_module": "TransferModule",
+        "to_module": "Loadlock2"
+      }
+    },
+    {
+      "id": "E052",
+      "activity": "Loadlock Slit Operation End",
+      "timestamp": "2026-02-01T08:04:12Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_04",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Loadlock2",
+        "TransferModule"
+      ],
+      "vmap": {
+        "action": "Loadlock Slit Operation",
+        "lifecycle": "end",
+        "case_id": "PKHG3.1_04",
+        "from_module": "TransferModule",
+        "to_module": "Loadlock2"
+      }
+    },
+    {
+      "id": "E053",
+      "activity": "Loadlock Venting Start",
+      "timestamp": "2026-02-01T08:04:16Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_04",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Loadlock2"
+      ],
+      "vmap": {
+        "action": "Loadlock Venting",
+        "lifecycle": "start",
+        "case_id": "PKHG3.1_04",
+        "from_module": "Loadlock2",
+        "to_module": "Loadlock2"
+      }
+    },
+    {
+      "id": "E054",
+      "activity": "Loadlock Venting End",
+      "timestamp": "2026-02-01T08:04:34Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_04",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Loadlock2"
+      ],
+      "vmap": {
+        "action": "Loadlock Venting",
+        "lifecycle": "end",
+        "case_id": "PKHG3.1_04",
+        "from_module": "Loadlock2",
+        "to_module": "Loadlock2"
+      }
+    },
+    {
+      "id": "E055",
+      "activity": "Loadlock Door Operation Start",
+      "timestamp": "2026-02-01T08:04:38Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_04",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Loadlock2"
+      ],
+      "vmap": {
+        "action": "Loadlock Door Operation",
+        "lifecycle": "start",
+        "case_id": "PKHG3.1_04",
+        "from_module": "Loadlock2",
+        "to_module": "Loadlock2"
+      }
+    },
+    {
+      "id": "E056",
+      "activity": "Loadlock Door Operation End",
+      "timestamp": "2026-02-01T08:04:46Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_04",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Loadlock2"
+      ],
+      "vmap": {
+        "action": "Loadlock Door Operation",
+        "lifecycle": "end",
+        "case_id": "PKHG3.1_04",
+        "from_module": "Loadlock2",
+        "to_module": "Loadlock2"
+      }
+    },
+    {
+      "id": "E057",
+      "activity": "EFEM Transfer to FOUP Start",
+      "timestamp": "2026-02-01T08:04:50Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_04",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Loadlock2"
+      ],
+      "vmap": {
+        "action": "EFEM Transfer to FOUP",
+        "lifecycle": "start",
+        "case_id": "PKHG3.1_04",
+        "from_module": "Loadlock2",
+        "to_module": "LP1"
+      }
+    },
+    {
+      "id": "E058",
+      "activity": "EFEM Transfer to FOUP End",
+      "timestamp": "2026-02-01T08:05:02Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_04",
+        "FOUP-PKHG3.1",
+        "LP1",
+        "Loadlock2"
+      ],
+      "vmap": {
+        "action": "EFEM Transfer to FOUP",
+        "lifecycle": "end",
+        "case_id": "PKHG3.1_04",
+        "from_module": "Loadlock2",
+        "to_module": "LP1"
+      }
+    },
+    {
+      "id": "E059",
+      "activity": "FOUP Unloading Start",
+      "timestamp": "2026-02-01T08:05:06Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_04",
+        "FOUP-PKHG3.1",
+        "LP1"
+      ],
+      "vmap": {
+        "action": "FOUP Unloading",
+        "lifecycle": "start",
+        "case_id": "PKHG3.1_04",
+        "from_module": "LP1",
+        "to_module": "FOUP-PKHG3.1"
+      }
+    },
+    {
+      "id": "E060",
+      "activity": "FOUP Unloading End",
+      "timestamp": "2026-02-01T08:05:16Z",
+      "omap": [
+        "PKHG3.1",
+        "PKHG3.1_04",
+        "FOUP-PKHG3.1",
+        "LP1"
+      ],
+      "vmap": {
+        "action": "FOUP Unloading",
+        "lifecycle": "end",
+        "case_id": "PKHG3.1_04",
+        "from_module": "LP1",
+        "to_module": "FOUP-PKHG3.1"
+      }
+    }
+  ]
+}
