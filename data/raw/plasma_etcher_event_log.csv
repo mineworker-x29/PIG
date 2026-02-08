@@ -1,0 +1,61 @@
+event_id,timestamp,activity,action,lifecycle,case_id,lot_id,wafer_id,foup_id,loadport_id,loadlock_id,pm_id,from_module,to_module
+E001,2026-02-01T08:00:00Z,FOUP Loading Start,FOUP Loading,start,LOTID0001_03,LOTID0001,03,FOUP-LOTID0001,LP1,,,Stocker,LP1
+E002,2026-02-01T08:00:10Z,FOUP Loading End,FOUP Loading,end,LOTID0001_03,LOTID0001,03,FOUP-LOTID0001,LP1,,,Stocker,LP1
+E003,2026-02-01T08:00:14Z,EFEM Transfer to Aligner Start,EFEM Transfer to Aligner,start,LOTID0001_03,LOTID0001,03,FOUP-LOTID0001,LP1,,,LP1,Aligner
+E004,2026-02-01T08:00:26Z,EFEM Transfer to Aligner End,EFEM Transfer to Aligner,end,LOTID0001_03,LOTID0001,03,FOUP-LOTID0001,LP1,,,LP1,Aligner
+E005,2026-02-01T08:00:30Z,Alignment Start,Alignment,start,LOTID0001_03,LOTID0001,03,FOUP-LOTID0001,LP1,,,Aligner,Aligner
+E006,2026-02-01T08:00:38Z,Alignment End,Alignment,end,LOTID0001_03,LOTID0001,03,FOUP-LOTID0001,LP1,,,Aligner,Aligner
+E007,2026-02-01T08:00:42Z,EFEM Transfer to Loadlock Start,EFEM Transfer to Loadlock,start,LOTID0001_03,LOTID0001,03,FOUP-LOTID0001,LP1,Loadlock1,,Aligner,Loadlock1
+E008,2026-02-01T08:00:54Z,EFEM Transfer to Loadlock End,EFEM Transfer to Loadlock,end,LOTID0001_03,LOTID0001,03,FOUP-LOTID0001,LP1,Loadlock1,,Aligner,Loadlock1
+E009,2026-02-01T08:00:58Z,Loadlock Door Operation Start,Loadlock Door Operation,start,LOTID0001_03,LOTID0001,03,FOUP-LOTID0001,LP1,Loadlock1,,Loadlock1,Loadlock1
+E010,2026-02-01T08:01:06Z,Loadlock Door Operation End,Loadlock Door Operation,end,LOTID0001_03,LOTID0001,03,FOUP-LOTID0001,LP1,Loadlock1,,Loadlock1,Loadlock1
+E011,2026-02-01T08:01:10Z,Loadlock Pumping Start,Loadlock Pumping,start,LOTID0001_03,LOTID0001,03,FOUP-LOTID0001,LP1,Loadlock1,,Loadlock1,Loadlock1
+E012,2026-02-01T08:01:30Z,Loadlock Pumping End,Loadlock Pumping,end,LOTID0001_03,LOTID0001,03,FOUP-LOTID0001,LP1,Loadlock1,,Loadlock1,Loadlock1
+E013,2026-02-01T08:01:34Z,Loadlock Slit Operation Start,Loadlock Slit Operation,start,LOTID0001_03,LOTID0001,03,FOUP-LOTID0001,LP1,Loadlock1,,Loadlock1,TransferModule
+E014,2026-02-01T08:01:42Z,Loadlock Slit Operation End,Loadlock Slit Operation,end,LOTID0001_03,LOTID0001,03,FOUP-LOTID0001,LP1,Loadlock1,,Loadlock1,TransferModule
+E015,2026-02-01T08:01:46Z,PM Slit Inbound Operation Start,PM Slit Inbound Operation,start,LOTID0001_03,LOTID0001,03,FOUP-LOTID0001,LP1,,PM1,TransferModule,PM1
+E016,2026-02-01T08:01:54Z,PM Slit Inbound Operation End,PM Slit Inbound Operation,end,LOTID0001_03,LOTID0001,03,FOUP-LOTID0001,LP1,,PM1,TransferModule,PM1
+E017,2026-02-01T08:01:58Z,PM Processing Start,PM Processing,start,LOTID0001_03,LOTID0001,03,FOUP-LOTID0001,LP1,,PM1,PM1,PM1
+E018,2026-02-01T08:03:28Z,PM Processing End,PM Processing,end,LOTID0001_03,LOTID0001,03,FOUP-LOTID0001,LP1,,PM1,PM1,PM1
+E019,2026-02-01T08:03:32Z,PM Slit Outbound Operation Start,PM Slit Outbound Operation,start,LOTID0001_03,LOTID0001,03,FOUP-LOTID0001,LP1,,PM1,PM1,TransferModule
+E020,2026-02-01T08:03:40Z,PM Slit Outbound Operation End,PM Slit Outbound Operation,end,LOTID0001_03,LOTID0001,03,FOUP-LOTID0001,LP1,,PM1,PM1,TransferModule
+E021,2026-02-01T08:03:44Z,Loadlock Slit Operation Start,Loadlock Slit Operation,start,LOTID0001_03,LOTID0001,03,FOUP-LOTID0001,LP1,Loadlock1,,TransferModule,Loadlock1
+E022,2026-02-01T08:03:52Z,Loadlock Slit Operation End,Loadlock Slit Operation,end,LOTID0001_03,LOTID0001,03,FOUP-LOTID0001,LP1,Loadlock1,,TransferModule,Loadlock1
+E023,2026-02-01T08:03:56Z,Loadlock Venting Start,Loadlock Venting,start,LOTID0001_03,LOTID0001,03,FOUP-LOTID0001,LP1,Loadlock1,,Loadlock1,Loadlock1
+E024,2026-02-01T08:04:14Z,Loadlock Venting End,Loadlock Venting,end,LOTID0001_03,LOTID0001,03,FOUP-LOTID0001,LP1,Loadlock1,,Loadlock1,Loadlock1
+E025,2026-02-01T08:04:18Z,Loadlock Door Operation Start,Loadlock Door Operation,start,LOTID0001_03,LOTID0001,03,FOUP-LOTID0001,LP1,Loadlock1,,Loadlock1,Loadlock1
+E026,2026-02-01T08:04:26Z,Loadlock Door Operation End,Loadlock Door Operation,end,LOTID0001_03,LOTID0001,03,FOUP-LOTID0001,LP1,Loadlock1,,Loadlock1,Loadlock1
+E027,2026-02-01T08:04:30Z,EFEM Transfer to FOUP Start,EFEM Transfer to FOUP,start,LOTID0001_03,LOTID0001,03,FOUP-LOTID0001,LP1,Loadlock1,,Loadlock1,LP1
+E028,2026-02-01T08:04:42Z,EFEM Transfer to FOUP End,EFEM Transfer to FOUP,end,LOTID0001_03,LOTID0001,03,FOUP-LOTID0001,LP1,Loadlock1,,Loadlock1,LP1
+E029,2026-02-01T08:04:46Z,FOUP Unloading Start,FOUP Unloading,start,LOTID0001_03,LOTID0001,03,FOUP-LOTID0001,LP1,,,LP1,FOUP-LOTID0001
+E030,2026-02-01T08:04:56Z,FOUP Unloading End,FOUP Unloading,end,LOTID0001_03,LOTID0001,03,FOUP-LOTID0001,LP1,,,LP1,FOUP-LOTID0001
+E031,2026-02-01T08:00:20Z,FOUP Loading Start,FOUP Loading,start,LOTID0001_04,LOTID0001,04,FOUP-LOTID0001,LP1,,,Stocker,LP1
+E032,2026-02-01T08:00:30Z,FOUP Loading End,FOUP Loading,end,LOTID0001_04,LOTID0001,04,FOUP-LOTID0001,LP1,,,Stocker,LP1
+E033,2026-02-01T08:00:34Z,EFEM Transfer to Aligner Start,EFEM Transfer to Aligner,start,LOTID0001_04,LOTID0001,04,FOUP-LOTID0001,LP1,,,LP1,Aligner
+E034,2026-02-01T08:00:46Z,EFEM Transfer to Aligner End,EFEM Transfer to Aligner,end,LOTID0001_04,LOTID0001,04,FOUP-LOTID0001,LP1,,,LP1,Aligner
+E035,2026-02-01T08:00:50Z,Alignment Start,Alignment,start,LOTID0001_04,LOTID0001,04,FOUP-LOTID0001,LP1,,,Aligner,Aligner
+E036,2026-02-01T08:00:58Z,Alignment End,Alignment,end,LOTID0001_04,LOTID0001,04,FOUP-LOTID0001,LP1,,,Aligner,Aligner
+E037,2026-02-01T08:01:02Z,EFEM Transfer to Loadlock Start,EFEM Transfer to Loadlock,start,LOTID0001_04,LOTID0001,04,FOUP-LOTID0001,LP1,Loadlock2,,Aligner,Loadlock2
+E038,2026-02-01T08:01:14Z,EFEM Transfer to Loadlock End,EFEM Transfer to Loadlock,end,LOTID0001_04,LOTID0001,04,FOUP-LOTID0001,LP1,Loadlock2,,Aligner,Loadlock2
+E039,2026-02-01T08:01:18Z,Loadlock Door Operation Start,Loadlock Door Operation,start,LOTID0001_04,LOTID0001,04,FOUP-LOTID0001,LP1,Loadlock2,,Loadlock2,Loadlock2
+E040,2026-02-01T08:01:26Z,Loadlock Door Operation End,Loadlock Door Operation,end,LOTID0001_04,LOTID0001,04,FOUP-LOTID0001,LP1,Loadlock2,,Loadlock2,Loadlock2
+E041,2026-02-01T08:01:30Z,Loadlock Pumping Start,Loadlock Pumping,start,LOTID0001_04,LOTID0001,04,FOUP-LOTID0001,LP1,Loadlock2,,Loadlock2,Loadlock2
+E042,2026-02-01T08:01:50Z,Loadlock Pumping End,Loadlock Pumping,end,LOTID0001_04,LOTID0001,04,FOUP-LOTID0001,LP1,Loadlock2,,Loadlock2,Loadlock2
+E043,2026-02-01T08:01:54Z,Loadlock Slit Operation Start,Loadlock Slit Operation,start,LOTID0001_04,LOTID0001,04,FOUP-LOTID0001,LP1,Loadlock2,,Loadlock2,TransferModule
+E044,2026-02-01T08:02:02Z,Loadlock Slit Operation End,Loadlock Slit Operation,end,LOTID0001_04,LOTID0001,04,FOUP-LOTID0001,LP1,Loadlock2,,Loadlock2,TransferModule
+E045,2026-02-01T08:02:06Z,PM Slit Inbound Operation Start,PM Slit Inbound Operation,start,LOTID0001_04,LOTID0001,04,FOUP-LOTID0001,LP1,,PM6,TransferModule,PM6
+E046,2026-02-01T08:02:14Z,PM Slit Inbound Operation End,PM Slit Inbound Operation,end,LOTID0001_04,LOTID0001,04,FOUP-LOTID0001,LP1,,PM6,TransferModule,PM6
+E047,2026-02-01T08:02:18Z,PM Processing Start,PM Processing,start,LOTID0001_04,LOTID0001,04,FOUP-LOTID0001,LP1,,PM6,PM6,PM6
+E048,2026-02-01T08:03:48Z,PM Processing End,PM Processing,end,LOTID0001_04,LOTID0001,04,FOUP-LOTID0001,LP1,,PM6,PM6,PM6
+E049,2026-02-01T08:03:52Z,PM Slit Outbound Operation Start,PM Slit Outbound Operation,start,LOTID0001_04,LOTID0001,04,FOUP-LOTID0001,LP1,,PM6,PM6,TransferModule
+E050,2026-02-01T08:04:00Z,PM Slit Outbound Operation End,PM Slit Outbound Operation,end,LOTID0001_04,LOTID0001,04,FOUP-LOTID0001,LP1,,PM6,PM6,TransferModule
+E051,2026-02-01T08:04:04Z,Loadlock Slit Operation Start,Loadlock Slit Operation,start,LOTID0001_04,LOTID0001,04,FOUP-LOTID0001,LP1,Loadlock2,,TransferModule,Loadlock2
+E052,2026-02-01T08:04:12Z,Loadlock Slit Operation End,Loadlock Slit Operation,end,LOTID0001_04,LOTID0001,04,FOUP-LOTID0001,LP1,Loadlock2,,TransferModule,Loadlock2
+E053,2026-02-01T08:04:16Z,Loadlock Venting Start,Loadlock Venting,start,LOTID0001_04,LOTID0001,04,FOUP-LOTID0001,LP1,Loadlock2,,Loadlock2,Loadlock2
+E054,2026-02-01T08:04:34Z,Loadlock Venting End,Loadlock Venting,end,LOTID0001_04,LOTID0001,04,FOUP-LOTID0001,LP1,Loadlock2,,Loadlock2,Loadlock2
+E055,2026-02-01T08:04:38Z,Loadlock Door Operation Start,Loadlock Door Operation,start,LOTID0001_04,LOTID0001,04,FOUP-LOTID0001,LP1,Loadlock2,,Loadlock2,Loadlock2
+E056,2026-02-01T08:04:46Z,Loadlock Door Operation End,Loadlock Door Operation,end,LOTID0001_04,LOTID0001,04,FOUP-LOTID0001,LP1,Loadlock2,,Loadlock2,Loadlock2
+E057,2026-02-01T08:04:50Z,EFEM Transfer to FOUP Start,EFEM Transfer to FOUP,start,LOTID0001_04,LOTID0001,04,FOUP-LOTID0001,LP1,Loadlock2,,Loadlock2,LP1
+E058,2026-02-01T08:05:02Z,EFEM Transfer to FOUP End,EFEM Transfer to FOUP,end,LOTID0001_04,LOTID0001,04,FOUP-LOTID0001,LP1,Loadlock2,,Loadlock2,LP1
+E059,2026-02-01T08:05:06Z,FOUP Unloading Start,FOUP Unloading,start,LOTID0001_04,LOTID0001,04,FOUP-LOTID0001,LP1,,,LP1,FOUP-LOTID0001
+E060,2026-02-01T08:05:16Z,FOUP Unloading End,FOUP Unloading,end,LOTID0001_04,LOTID0001,04,FOUP-LOTID0001,LP1,,,LP1,FOUP-LOTID0001
