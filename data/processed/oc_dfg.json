@@ -1,0 +1,1092 @@
+{
+  "meta": {
+    "event_log_path": "/workspace/PIG/data/raw/plasma_etcher_event_log.csv",
+    "ocel_path": "/workspace/PIG/data/raw/plasma_etcher_event_log.ocel.json",
+    "object_types": [
+      "aligner",
+      "foup",
+      "loadlock",
+      "loadport",
+      "lot",
+      "process_module",
+      "stocker",
+      "transfer_module",
+      "wafer"
+    ]
+  },
+  "oc_dfg": {
+    "lot": [
+      {
+        "from": "Alignment End",
+        "to": "EFEM Transfer to Loadlock Start",
+        "count": 2
+      },
+      {
+        "from": "EFEM Transfer to Aligner End",
+        "to": "Alignment Start",
+        "count": 2
+      },
+      {
+        "from": "EFEM Transfer to FOUP End",
+        "to": "FOUP Unloading Start",
+        "count": 2
+      },
+      {
+        "from": "EFEM Transfer to Loadlock End",
+        "to": "Loadlock Door Operation Start",
+        "count": 2
+      },
+      {
+        "from": "FOUP Loading End",
+        "to": "EFEM Transfer to Aligner Start",
+        "count": 2
+      },
+      {
+        "from": "Loadlock Door Operation End",
+        "to": "EFEM Transfer to FOUP Start",
+        "count": 2
+      },
+      {
+        "from": "Loadlock Door Operation Start",
+        "to": "Loadlock Door Operation End",
+        "count": 2
+      },
+      {
+        "from": "Loadlock Slit Operation End",
+        "to": "PM Slit Inbound Operation Start",
+        "count": 2
+      },
+      {
+        "from": "Loadlock Slit Operation Start",
+        "to": "Loadlock Slit Operation End",
+        "count": 2
+      },
+      {
+        "from": "PM Slit Outbound Operation End",
+        "to": "Loadlock Slit Operation Start",
+        "count": 2
+      },
+      {
+        "from": "Alignment Start",
+        "to": "EFEM Transfer to Loadlock End",
+        "count": 1
+      },
+      {
+        "from": "Alignment Start",
+        "to": "FOUP Loading End",
+        "count": 1
+      },
+      {
+        "from": "EFEM Transfer to Aligner Start",
+        "to": "Alignment End",
+        "count": 1
+      },
+      {
+        "from": "EFEM Transfer to Aligner Start",
+        "to": "FOUP Loading Start",
+        "count": 1
+      },
+      {
+        "from": "EFEM Transfer to FOUP Start",
+        "to": "FOUP Unloading End",
+        "count": 1
+      },
+      {
+        "from": "EFEM Transfer to FOUP Start",
+        "to": "Loadlock Venting End",
+        "count": 1
+      },
+      {
+        "from": "EFEM Transfer to Loadlock Start",
+        "to": "EFEM Transfer to Aligner End",
+        "count": 1
+      },
+      {
+        "from": "EFEM Transfer to Loadlock Start",
+        "to": "Loadlock Door Operation End",
+        "count": 1
+      },
+      {
+        "from": "FOUP Loading Start",
+        "to": "EFEM Transfer to Aligner End",
+        "count": 1
+      },
+      {
+        "from": "FOUP Loading Start",
+        "to": "FOUP Loading End",
+        "count": 1
+      },
+      {
+        "from": "FOUP Unloading End",
+        "to": "EFEM Transfer to FOUP End",
+        "count": 1
+      },
+      {
+        "from": "FOUP Unloading Start",
+        "to": "FOUP Unloading End",
+        "count": 1
+      },
+      {
+        "from": "FOUP Unloading Start",
+        "to": "Loadlock Door Operation End",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Door Operation End",
+        "to": "Loadlock Pumping End",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Door Operation End",
+        "to": "Loadlock Pumping Start",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Door Operation Start",
+        "to": "Alignment End",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Door Operation Start",
+        "to": "EFEM Transfer to FOUP End",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Pumping End",
+        "to": "Loadlock Pumping Start",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Pumping End",
+        "to": "PM Slit Inbound Operation End",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Pumping Start",
+        "to": "EFEM Transfer to Loadlock End",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Pumping Start",
+        "to": "Loadlock Slit Operation Start",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Slit Operation End",
+        "to": "Loadlock Venting End",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Slit Operation End",
+        "to": "PM Slit Outbound Operation Start",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Slit Operation Start",
+        "to": "PM Processing End",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Slit Operation Start",
+        "to": "PM Processing Start",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Venting End",
+        "to": "Loadlock Door Operation Start",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Venting End",
+        "to": "Loadlock Venting Start",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Venting Start",
+        "to": "Loadlock Door Operation Start",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Venting Start",
+        "to": "PM Slit Outbound Operation End",
+        "count": 1
+      },
+      {
+        "from": "PM Processing End",
+        "to": "Loadlock Slit Operation End",
+        "count": 1
+      },
+      {
+        "from": "PM Processing End",
+        "to": "PM Slit Outbound Operation Start",
+        "count": 1
+      },
+      {
+        "from": "PM Processing Start",
+        "to": "Loadlock Slit Operation End",
+        "count": 1
+      },
+      {
+        "from": "PM Processing Start",
+        "to": "PM Processing End",
+        "count": 1
+      },
+      {
+        "from": "PM Slit Inbound Operation End",
+        "to": "Loadlock Slit Operation Start",
+        "count": 1
+      },
+      {
+        "from": "PM Slit Inbound Operation End",
+        "to": "PM Processing Start",
+        "count": 1
+      },
+      {
+        "from": "PM Slit Inbound Operation Start",
+        "to": "Loadlock Pumping End",
+        "count": 1
+      },
+      {
+        "from": "PM Slit Inbound Operation Start",
+        "to": "PM Slit Inbound Operation End",
+        "count": 1
+      },
+      {
+        "from": "PM Slit Outbound Operation Start",
+        "to": "Loadlock Venting Start",
+        "count": 1
+      },
+      {
+        "from": "PM Slit Outbound Operation Start",
+        "to": "PM Slit Outbound Operation End",
+        "count": 1
+      }
+    ],
+    "wafer": [
+      {
+        "from": "Loadlock Door Operation Start",
+        "to": "Loadlock Door Operation End",
+        "count": 4
+      },
+      {
+        "from": "Loadlock Slit Operation Start",
+        "to": "Loadlock Slit Operation End",
+        "count": 4
+      },
+      {
+        "from": "Alignment End",
+        "to": "EFEM Transfer to Loadlock Start",
+        "count": 2
+      },
+      {
+        "from": "Alignment Start",
+        "to": "Alignment End",
+        "count": 2
+      },
+      {
+        "from": "EFEM Transfer to Aligner End",
+        "to": "Alignment Start",
+        "count": 2
+      },
+      {
+        "from": "EFEM Transfer to Aligner Start",
+        "to": "EFEM Transfer to Aligner End",
+        "count": 2
+      },
+      {
+        "from": "EFEM Transfer to FOUP End",
+        "to": "FOUP Unloading Start",
+        "count": 2
+      },
+      {
+        "from": "EFEM Transfer to FOUP Start",
+        "to": "EFEM Transfer to FOUP End",
+        "count": 2
+      },
+      {
+        "from": "EFEM Transfer to Loadlock End",
+        "to": "Loadlock Door Operation Start",
+        "count": 2
+      },
+      {
+        "from": "EFEM Transfer to Loadlock Start",
+        "to": "EFEM Transfer to Loadlock End",
+        "count": 2
+      },
+      {
+        "from": "FOUP Loading End",
+        "to": "EFEM Transfer to Aligner Start",
+        "count": 2
+      },
+      {
+        "from": "FOUP Loading Start",
+        "to": "FOUP Loading End",
+        "count": 2
+      },
+      {
+        "from": "FOUP Unloading Start",
+        "to": "FOUP Unloading End",
+        "count": 2
+      },
+      {
+        "from": "Loadlock Door Operation End",
+        "to": "EFEM Transfer to FOUP Start",
+        "count": 2
+      },
+      {
+        "from": "Loadlock Door Operation End",
+        "to": "Loadlock Pumping Start",
+        "count": 2
+      },
+      {
+        "from": "Loadlock Pumping End",
+        "to": "Loadlock Slit Operation Start",
+        "count": 2
+      },
+      {
+        "from": "Loadlock Pumping Start",
+        "to": "Loadlock Pumping End",
+        "count": 2
+      },
+      {
+        "from": "Loadlock Slit Operation End",
+        "to": "Loadlock Venting Start",
+        "count": 2
+      },
+      {
+        "from": "Loadlock Slit Operation End",
+        "to": "PM Slit Inbound Operation Start",
+        "count": 2
+      },
+      {
+        "from": "Loadlock Venting End",
+        "to": "Loadlock Door Operation Start",
+        "count": 2
+      },
+      {
+        "from": "Loadlock Venting Start",
+        "to": "Loadlock Venting End",
+        "count": 2
+      },
+      {
+        "from": "PM Processing End",
+        "to": "PM Slit Outbound Operation Start",
+        "count": 2
+      },
+      {
+        "from": "PM Processing Start",
+        "to": "PM Processing End",
+        "count": 2
+      },
+      {
+        "from": "PM Slit Inbound Operation End",
+        "to": "PM Processing Start",
+        "count": 2
+      },
+      {
+        "from": "PM Slit Inbound Operation Start",
+        "to": "PM Slit Inbound Operation End",
+        "count": 2
+      },
+      {
+        "from": "PM Slit Outbound Operation End",
+        "to": "Loadlock Slit Operation Start",
+        "count": 2
+      },
+      {
+        "from": "PM Slit Outbound Operation Start",
+        "to": "PM Slit Outbound Operation End",
+        "count": 2
+      }
+    ],
+    "foup": [
+      {
+        "from": "Alignment End",
+        "to": "EFEM Transfer to Loadlock Start",
+        "count": 2
+      },
+      {
+        "from": "EFEM Transfer to Aligner End",
+        "to": "Alignment Start",
+        "count": 2
+      },
+      {
+        "from": "EFEM Transfer to FOUP End",
+        "to": "FOUP Unloading Start",
+        "count": 2
+      },
+      {
+        "from": "EFEM Transfer to Loadlock End",
+        "to": "Loadlock Door Operation Start",
+        "count": 2
+      },
+      {
+        "from": "FOUP Loading End",
+        "to": "EFEM Transfer to Aligner Start",
+        "count": 2
+      },
+      {
+        "from": "Loadlock Door Operation End",
+        "to": "EFEM Transfer to FOUP Start",
+        "count": 2
+      },
+      {
+        "from": "Loadlock Door Operation Start",
+        "to": "Loadlock Door Operation End",
+        "count": 2
+      },
+      {
+        "from": "Loadlock Slit Operation End",
+        "to": "PM Slit Inbound Operation Start",
+        "count": 2
+      },
+      {
+        "from": "Loadlock Slit Operation Start",
+        "to": "Loadlock Slit Operation End",
+        "count": 2
+      },
+      {
+        "from": "PM Slit Outbound Operation End",
+        "to": "Loadlock Slit Operation Start",
+        "count": 2
+      },
+      {
+        "from": "Alignment Start",
+        "to": "EFEM Transfer to Loadlock End",
+        "count": 1
+      },
+      {
+        "from": "Alignment Start",
+        "to": "FOUP Loading End",
+        "count": 1
+      },
+      {
+        "from": "EFEM Transfer to Aligner Start",
+        "to": "Alignment End",
+        "count": 1
+      },
+      {
+        "from": "EFEM Transfer to Aligner Start",
+        "to": "FOUP Loading Start",
+        "count": 1
+      },
+      {
+        "from": "EFEM Transfer to FOUP Start",
+        "to": "FOUP Unloading End",
+        "count": 1
+      },
+      {
+        "from": "EFEM Transfer to FOUP Start",
+        "to": "Loadlock Venting End",
+        "count": 1
+      },
+      {
+        "from": "EFEM Transfer to Loadlock Start",
+        "to": "EFEM Transfer to Aligner End",
+        "count": 1
+      },
+      {
+        "from": "EFEM Transfer to Loadlock Start",
+        "to": "Loadlock Door Operation End",
+        "count": 1
+      },
+      {
+        "from": "FOUP Loading Start",
+        "to": "EFEM Transfer to Aligner End",
+        "count": 1
+      },
+      {
+        "from": "FOUP Loading Start",
+        "to": "FOUP Loading End",
+        "count": 1
+      },
+      {
+        "from": "FOUP Unloading End",
+        "to": "EFEM Transfer to FOUP End",
+        "count": 1
+      },
+      {
+        "from": "FOUP Unloading Start",
+        "to": "FOUP Unloading End",
+        "count": 1
+      },
+      {
+        "from": "FOUP Unloading Start",
+        "to": "Loadlock Door Operation End",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Door Operation End",
+        "to": "Loadlock Pumping End",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Door Operation End",
+        "to": "Loadlock Pumping Start",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Door Operation Start",
+        "to": "Alignment End",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Door Operation Start",
+        "to": "EFEM Transfer to FOUP End",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Pumping End",
+        "to": "Loadlock Pumping Start",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Pumping End",
+        "to": "PM Slit Inbound Operation End",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Pumping Start",
+        "to": "EFEM Transfer to Loadlock End",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Pumping Start",
+        "to": "Loadlock Slit Operation Start",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Slit Operation End",
+        "to": "Loadlock Venting End",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Slit Operation End",
+        "to": "PM Slit Outbound Operation Start",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Slit Operation Start",
+        "to": "PM Processing End",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Slit Operation Start",
+        "to": "PM Processing Start",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Venting End",
+        "to": "Loadlock Door Operation Start",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Venting End",
+        "to": "Loadlock Venting Start",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Venting Start",
+        "to": "Loadlock Door Operation Start",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Venting Start",
+        "to": "PM Slit Outbound Operation End",
+        "count": 1
+      },
+      {
+        "from": "PM Processing End",
+        "to": "Loadlock Slit Operation End",
+        "count": 1
+      },
+      {
+        "from": "PM Processing End",
+        "to": "PM Slit Outbound Operation Start",
+        "count": 1
+      },
+      {
+        "from": "PM Processing Start",
+        "to": "Loadlock Slit Operation End",
+        "count": 1
+      },
+      {
+        "from": "PM Processing Start",
+        "to": "PM Processing End",
+        "count": 1
+      },
+      {
+        "from": "PM Slit Inbound Operation End",
+        "to": "Loadlock Slit Operation Start",
+        "count": 1
+      },
+      {
+        "from": "PM Slit Inbound Operation End",
+        "to": "PM Processing Start",
+        "count": 1
+      },
+      {
+        "from": "PM Slit Inbound Operation Start",
+        "to": "Loadlock Pumping End",
+        "count": 1
+      },
+      {
+        "from": "PM Slit Inbound Operation Start",
+        "to": "PM Slit Inbound Operation End",
+        "count": 1
+      },
+      {
+        "from": "PM Slit Outbound Operation Start",
+        "to": "Loadlock Venting Start",
+        "count": 1
+      },
+      {
+        "from": "PM Slit Outbound Operation Start",
+        "to": "PM Slit Outbound Operation End",
+        "count": 1
+      }
+    ],
+    "loadport": [
+      {
+        "from": "Alignment End",
+        "to": "EFEM Transfer to Loadlock Start",
+        "count": 2
+      },
+      {
+        "from": "EFEM Transfer to Aligner End",
+        "to": "Alignment Start",
+        "count": 2
+      },
+      {
+        "from": "EFEM Transfer to FOUP End",
+        "to": "FOUP Unloading Start",
+        "count": 2
+      },
+      {
+        "from": "EFEM Transfer to Loadlock End",
+        "to": "Loadlock Door Operation Start",
+        "count": 2
+      },
+      {
+        "from": "FOUP Loading End",
+        "to": "EFEM Transfer to Aligner Start",
+        "count": 2
+      },
+      {
+        "from": "Loadlock Door Operation End",
+        "to": "EFEM Transfer to FOUP Start",
+        "count": 2
+      },
+      {
+        "from": "Loadlock Door Operation Start",
+        "to": "Loadlock Door Operation End",
+        "count": 2
+      },
+      {
+        "from": "Loadlock Slit Operation End",
+        "to": "PM Slit Inbound Operation Start",
+        "count": 2
+      },
+      {
+        "from": "Loadlock Slit Operation Start",
+        "to": "Loadlock Slit Operation End",
+        "count": 2
+      },
+      {
+        "from": "PM Slit Outbound Operation End",
+        "to": "Loadlock Slit Operation Start",
+        "count": 2
+      },
+      {
+        "from": "Alignment Start",
+        "to": "EFEM Transfer to Loadlock End",
+        "count": 1
+      },
+      {
+        "from": "Alignment Start",
+        "to": "FOUP Loading End",
+        "count": 1
+      },
+      {
+        "from": "EFEM Transfer to Aligner Start",
+        "to": "Alignment End",
+        "count": 1
+      },
+      {
+        "from": "EFEM Transfer to Aligner Start",
+        "to": "FOUP Loading Start",
+        "count": 1
+      },
+      {
+        "from": "EFEM Transfer to FOUP Start",
+        "to": "FOUP Unloading End",
+        "count": 1
+      },
+      {
+        "from": "EFEM Transfer to FOUP Start",
+        "to": "Loadlock Venting End",
+        "count": 1
+      },
+      {
+        "from": "EFEM Transfer to Loadlock Start",
+        "to": "EFEM Transfer to Aligner End",
+        "count": 1
+      },
+      {
+        "from": "EFEM Transfer to Loadlock Start",
+        "to": "Loadlock Door Operation End",
+        "count": 1
+      },
+      {
+        "from": "FOUP Loading Start",
+        "to": "EFEM Transfer to Aligner End",
+        "count": 1
+      },
+      {
+        "from": "FOUP Loading Start",
+        "to": "FOUP Loading End",
+        "count": 1
+      },
+      {
+        "from": "FOUP Unloading End",
+        "to": "EFEM Transfer to FOUP End",
+        "count": 1
+      },
+      {
+        "from": "FOUP Unloading Start",
+        "to": "FOUP Unloading End",
+        "count": 1
+      },
+      {
+        "from": "FOUP Unloading Start",
+        "to": "Loadlock Door Operation End",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Door Operation End",
+        "to": "Loadlock Pumping End",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Door Operation End",
+        "to": "Loadlock Pumping Start",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Door Operation Start",
+        "to": "Alignment End",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Door Operation Start",
+        "to": "EFEM Transfer to FOUP End",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Pumping End",
+        "to": "Loadlock Pumping Start",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Pumping End",
+        "to": "PM Slit Inbound Operation End",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Pumping Start",
+        "to": "EFEM Transfer to Loadlock End",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Pumping Start",
+        "to": "Loadlock Slit Operation Start",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Slit Operation End",
+        "to": "Loadlock Venting End",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Slit Operation End",
+        "to": "PM Slit Outbound Operation Start",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Slit Operation Start",
+        "to": "PM Processing End",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Slit Operation Start",
+        "to": "PM Processing Start",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Venting End",
+        "to": "Loadlock Door Operation Start",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Venting End",
+        "to": "Loadlock Venting Start",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Venting Start",
+        "to": "Loadlock Door Operation Start",
+        "count": 1
+      },
+      {
+        "from": "Loadlock Venting Start",
+        "to": "PM Slit Outbound Operation End",
+        "count": 1
+      },
+      {
+        "from": "PM Processing End",
+        "to": "Loadlock Slit Operation End",
+        "count": 1
+      },
+      {
+        "from": "PM Processing End",
+        "to": "PM Slit Outbound Operation Start",
+        "count": 1
+      },
+      {
+        "from": "PM Processing Start",
+        "to": "Loadlock Slit Operation End",
+        "count": 1
+      },
+      {
+        "from": "PM Processing Start",
+        "to": "PM Processing End",
+        "count": 1
+      },
+      {
+        "from": "PM Slit Inbound Operation End",
+        "to": "Loadlock Slit Operation Start",
+        "count": 1
+      },
+      {
+        "from": "PM Slit Inbound Operation End",
+        "to": "PM Processing Start",
+        "count": 1
+      },
+      {
+        "from": "PM Slit Inbound Operation Start",
+        "to": "Loadlock Pumping End",
+        "count": 1
+      },
+      {
+        "from": "PM Slit Inbound Operation Start",
+        "to": "PM Slit Inbound Operation End",
+        "count": 1
+      },
+      {
+        "from": "PM Slit Outbound Operation Start",
+        "to": "Loadlock Venting Start",
+        "count": 1
+      },
+      {
+        "from": "PM Slit Outbound Operation Start",
+        "to": "PM Slit Outbound Operation End",
+        "count": 1
+      }
+    ],
+    "stocker": [
+      {
+        "from": "FOUP Loading Start",
+        "to": "FOUP Loading End",
+        "count": 2
+      },
+      {
+        "from": "FOUP Loading End",
+        "to": "FOUP Loading Start",
+        "count": 1
+      }
+    ],
+    "aligner": [
+      {
+        "from": "Alignment End",
+        "to": "EFEM Transfer to Loadlock Start",
+        "count": 2
+      },
+      {
+        "from": "EFEM Transfer to Aligner End",
+        "to": "Alignment Start",
+        "count": 2
+      },
+      {
+        "from": "Alignment Start",
+        "to": "EFEM Transfer to Aligner Start",
+        "count": 1
+      },
+      {
+        "from": "Alignment Start",
+        "to": "EFEM Transfer to Loadlock End",
+        "count": 1
+      },
+      {
+        "from": "EFEM Transfer to Aligner Start",
+        "to": "Alignment End",
+        "count": 1
+      },
+      {
+        "from": "EFEM Transfer to Aligner Start",
+        "to": "EFEM Transfer to Aligner End",
+        "count": 1
+      },
+      {
+        "from": "EFEM Transfer to Loadlock End",
+        "to": "Alignment End",
+        "count": 1
+      },
+      {
+        "from": "EFEM Transfer to Loadlock Start",
+        "to": "EFEM Transfer to Aligner End",
+        "count": 1
+      },
+      {
+        "from": "EFEM Transfer to Loadlock Start",
+        "to": "EFEM Transfer to Loadlock End",
+        "count": 1
+      }
+    ],
+    "loadlock": [
+      {
+        "from": "Loadlock Door Operation Start",
+        "to": "Loadlock Door Operation End",
+        "count": 4
+      },
+      {
+        "from": "Loadlock Slit Operation Start",
+        "to": "Loadlock Slit Operation End",
+        "count": 4
+      },
+      {
+        "from": "EFEM Transfer to FOUP Start",
+        "to": "EFEM Transfer to FOUP End",
+        "count": 2
+      },
+      {
+        "from": "EFEM Transfer to Loadlock End",
+        "to": "Loadlock Door Operation Start",
+        "count": 2
+      },
+      {
+        "from": "EFEM Transfer to Loadlock Start",
+        "to": "EFEM Transfer to Loadlock End",
+        "count": 2
+      },
+      {
+        "from": "Loadlock Door Operation End",
+        "to": "EFEM Transfer to FOUP Start",
+        "count": 2
+      },
+      {
+        "from": "Loadlock Door Operation End",
+        "to": "Loadlock Pumping Start",
+        "count": 2
+      },
+      {
+        "from": "Loadlock Pumping End",
+        "to": "Loadlock Slit Operation Start",
+        "count": 2
+      },
+      {
+        "from": "Loadlock Pumping Start",
+        "to": "Loadlock Pumping End",
+        "count": 2
+      },
+      {
+        "from": "Loadlock Slit Operation End",
+        "to": "Loadlock Slit Operation Start",
+        "count": 2
+      },
+      {
+        "from": "Loadlock Slit Operation End",
+        "to": "Loadlock Venting Start",
+        "count": 2
+      },
+      {
+        "from": "Loadlock Venting End",
+        "to": "Loadlock Door Operation Start",
+        "count": 2
+      },
+      {
+        "from": "Loadlock Venting Start",
+        "to": "Loadlock Venting End",
+        "count": 2
+      }
+    ],
+    "transfer_module": [
+      {
+        "from": "Loadlock Slit Operation Start",
+        "to": "Loadlock Slit Operation End",
+        "count": 4
+      },
+      {
+        "from": "Loadlock Slit Operation End",
+        "to": "PM Slit Inbound Operation Start",
+        "count": 2
+      },
+      {
+        "from": "PM Slit Inbound Operation Start",
+        "to": "PM Slit Inbound Operation End",
+        "count": 2
+      },
+      {
+        "from": "PM Slit Outbound Operation End",
+        "to": "Loadlock Slit Operation Start",
+        "count": 2
+      },
+      {
+        "from": "PM Slit Outbound Operation Start",
+        "to": "PM Slit Outbound Operation End",
+        "count": 2
+      },
+      {
+        "from": "Loadlock Slit Operation End",
+        "to": "PM Slit Outbound Operation Start",
+        "count": 1
+      },
+      {
+        "from": "PM Slit Inbound Operation End",
+        "to": "Loadlock Slit Operation Start",
+        "count": 1
+      },
+      {
+        "from": "PM Slit Inbound Operation End",
+        "to": "PM Slit Outbound Operation Start",
+        "count": 1
+      }
+    ],
+    "process_module": [
+      {
+        "from": "PM Processing End",
+        "to": "PM Slit Outbound Operation Start",
+        "count": 2
+      },
+      {
+        "from": "PM Processing Start",
+        "to": "PM Processing End",
+        "count": 2
+      },
+      {
+        "from": "PM Slit Inbound Operation End",
+        "to": "PM Processing Start",
+        "count": 2
+      },
+      {
+        "from": "PM Slit Inbound Operation Start",
+        "to": "PM Slit Inbound Operation End",
+        "count": 2
+      },
+      {
+        "from": "PM Slit Outbound Operation Start",
+        "to": "PM Slit Outbound Operation End",
+        "count": 2
+      }
+    ]
+  }
+}

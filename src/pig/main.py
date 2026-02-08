@@ -3,33 +3,58 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-from pig.pipeline import generate_stub_ocel
+from pig.pipeline import run_default_ocdfg_pipeline
 
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="pig",
-        description="PIG MVP pipeline runner",
+        description="PIG 기본 데이터 로드 + OC-DFG/리포트 생성기",
     )
     parser.add_argument(
         "--raw-dir",
         type=Path,
         default=Path("data/raw"),
-        help="Directory containing raw data/logs",
+        help="기본 event log(.csv)와 OCEL(.ocel.json)을 찾을 디렉터리",
     )
     parser.add_argument(
-        "--out",
+        "--event-log",
         type=Path,
-        default=Path("data/processed/ocel_stub.json"),
-        help="Output OCEL JSON path",
+        default=None,
+        help="event log 파일 경로 (기본값: raw-dir 내 첫 *.csv)",
+    )
+    parser.add_argument(
+        "--ocel",
+        type=Path,
+        default=None,
+        help="OCEL 파일 경로 (기본값: raw-dir 내 첫 *.ocel.json)",
+    )
+    parser.add_argument(
+        "--dfg-out",
+        type=Path,
+        default=Path("data/processed/oc_dfg.json"),
+        help="생성할 OC-DFG JSON 출력 경로",
+    )
+    parser.add_argument(
+        "--report-out",
+        type=Path,
+        default=Path("data/processed/basic_report.md"),
+        help="기본 레포트 출력 경로",
     )
     return parser
 
 
 def main() -> int:
     args = build_parser().parse_args()
-    generate_stub_ocel(raw_dir=args.raw_dir, out_path=args.out)
-    print(f"[PIG] OCEL stub generated: {args.out}")
+    dfg_path, report_path = run_default_ocdfg_pipeline(
+        raw_dir=args.raw_dir,
+        dfg_out_path=args.dfg_out,
+        report_out_path=args.report_out,
+        event_log_path=args.event_log,
+        ocel_path=args.ocel,
+    )
+    print(f"[PIG] OC-DFG generated: {dfg_path}")
+    print(f"[PIG] Report generated: {report_path}")
     return 0
 
 
