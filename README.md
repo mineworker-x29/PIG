@@ -7,7 +7,7 @@
 
 ### 1) 범위 (In Scope)
 - 원천 데이터/로그 입력 디렉터리(`data/raw`)를 받는다.
-- MVP 파이프라인 실행 시, 샘플 OCEL JSON 결과(`data/processed/ocel_stub.json`)를 생성한다.
+- MVP 파이프라인 실행 시, 기본 event log/OCEL을 로드해 OC-DFG(`data/processed/oc_dfg.json`)와 기본 레포트(`data/processed/basic_report.md`)를 생성한다.
 - CLI 엔트리포인트(`pig`)를 통해 최소 실행 경로를 제공한다.
 
 ### 2) 비범위 (Out of Scope)
@@ -17,7 +17,7 @@
 
 ### 3) MVP 완료 기준 (Definition of Done)
 - `scripts/bootstrap.sh`로 로컬 실행 환경이 구성된다.
-- `scripts/run.sh` 또는 `make run`으로 OCEL 스텁 파일이 생성된다.
+- `scripts/run.sh` 또는 `make run`으로 OC-DFG/기본 레포트가 생성된다.
 - README의 실행 절차만으로 신규 개발자가 5분 내 실행 가능하다.
 
 ## 프로젝트 구조
@@ -32,7 +32,7 @@
 │  └─ run.sh             # 기본 실행 스크립트
 ├─ src/pig/
 │  ├─ main.py            # CLI 엔트리포인트
-│  └─ pipeline.py        # MVP 파이프라인(OCEL 스텁 생성)
+│  └─ pipeline.py        # 기본 데이터 로드 + OC-DFG/리포트 생성
 ├─ Makefile
 └─ pyproject.toml
 ```
@@ -52,7 +52,8 @@ make run
 ```
 
 실행 후 생성 파일:
-- `data/processed/ocel_stub.json`
+- `data/processed/oc_dfg.json`
+- `data/processed/basic_report.md`
 
 ## 다음 단계 제안
 - 원천 시스템별 파서 모듈 추가 (`src/pig/connectors/*`)
