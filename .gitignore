@@ -1,3 +1,7 @@
 .venv/
 __pycache__/
 *.pyc
+# Generated sample graph images
+data/processed/*_oc-dfg.png
+data/processed/*_oc-pn.png
+
